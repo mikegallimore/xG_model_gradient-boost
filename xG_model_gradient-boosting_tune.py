@@ -60,7 +60,7 @@ if run == baseline:
     # fit baseline model
     clf.fit(x, y)
 
-    # guage feature importance
+    # gauge feature importance
     predictors=list(x)
     feat_imp = pd.Series(clf.feature_importances_, predictors).sort_values(ascending=False)
     feat_imp.plot(kind='bar', title='Importance of Features')
